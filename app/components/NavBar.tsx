@@ -19,8 +19,13 @@ const NavBar = () => {
             <a key={ key } href={ links[key] }>{ key }</a>
           ))					
 				}
-			</div>			
-		</div>	
+			</div>
+      <form className="flex">
+        <input type="text" placeholder="Search" />
+        <input type="submit" />
+      </form>
+      <button>Login</button>
+		</div>
 	)
 }
 
