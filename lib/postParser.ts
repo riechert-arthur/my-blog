@@ -19,18 +19,26 @@ export async function generateSanitizedBlogHTML(slug: string): Promise<string> {
 
 	const rawMarkdown: string = await getRawBlogContents(slug)		
 
-	Marked.setOptions ({
-		renderer: new Renderer,
-		gfm: true,
-		tables: true,
-		breaks: false,
-		pedantic: false,
-		sanitize: true,
-		smartLists: true,
-		smartypants: false
-	})
+  try {
+    Marked.setOptions ({
+      renderer: new Renderer,
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: true,
+      smartLists: true,
+      smartypants: false
+    })
 
-	const sanitizedHTML: string =  Marked.parse(rawMarkdown)
+    const sanitizedHTML: string =  Marked.parse(rawMarkdown)
 
-	return sanitizedHTML 
+    return sanitizedHTML
+
+  } catch(e: Error) {
+   
+    console.error("Error while parsing post markdown: ", e)
+    return null
+
+  }
 }
