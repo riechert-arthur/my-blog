@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import SignUpForm from "../components/SignUpForm"
 
-const page = (): FC => {
+const page: FC = () => {
   return (
     <div>
       <SignUpForm />

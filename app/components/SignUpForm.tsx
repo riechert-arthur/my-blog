@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-const SignUpForm = (): FC => {
+const SignUpForm: FC = () => {
   return (
     <form className="flex flex-col">
       <label>Username:</label>

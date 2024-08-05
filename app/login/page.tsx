@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import LoginForm from "../components/LoginForm"
 
-const page = (): FC => {
+const page: FC = () => {
   return (
     <div>
       <LoginForm />      

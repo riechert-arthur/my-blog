@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-const LoginForm = (): FC => {
+const LoginForm: FC = () => {
   return (
     <form className="flex flex-col">
       <label>Username:</label>
