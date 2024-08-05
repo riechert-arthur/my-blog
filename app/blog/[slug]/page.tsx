@@ -1,4 +1,4 @@
-import { generateSanitizedBlogHTML } from "/lib/postParser"
+import { generateSanitizedBlogHTML } from "/lib/posts"
 import Markdown from 'markdown-parser-react'
 
 interface PageProps {
