@@ -79,21 +79,21 @@ export interface UserParams {
   banned: boolean,
 }
 
-const getUserQuery: string = `
+const getUserByIDQuery: string = `
   SELECT * FROM users WHERE id = ?
 `
 
-export async function getUser(id: number): Promise<UserParams> {
+export async function getUserByID(id: number): Promise<UserParams> {
   
   const db: Database = await openDb()
 
   try {
 
-    return await db.get(getUserQuery, id)
+    return await db.get(getUserByIDQuery, id)
 
   } catch (e: Error) {
 
-    console.error("Error while fetching user from db: ", e)
+    console.error("Error while fetching user by ID from db: ", e)
     throw e
 
   } finally {
@@ -101,6 +101,30 @@ export async function getUser(id: number): Promise<UserParams> {
     db.close()
 
   }
+}
+
+const getUserByUsernameQuery: string = `
+  SELECT * FROM users WHERE username = ?
+`
+
+export async function getUserByUsername(username: string): Promise<UserParams> {
+
+  const db: Database = await openDb()
+
+  try {
+
+    return await db.get(getUserByUsernameQuery)
+
+  } catch (e: Error) {
+
+    console.error("Error while fetching user by username from db: ", e)
+    throw e
+    
+  } finally {
+
+    db.close()
+
+  } 
 }
 
 const updateUserQuery: string = `
