@@ -13,6 +13,7 @@ const SignUpForm: FC = () => {
       <input name="first_name" placeholder="first_name" />
       <label>Last Name</label>
       <input name="last_name" placeholder="last_name" />
+      <button type="submit">Sign Up</button>
     </form>
   )
 }

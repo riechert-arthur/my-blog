@@ -16,7 +16,7 @@ const links: Links = {
 const NavBar: FC = () => {
 
 	return (
-		<div className="flex w-full h-fit">
+		<div className="flex justify-between w-full h-fit px-8 pt-4">
 			<div className="flex w-1/2 h-fit">
 				{
 					Object.keys(links).map((key) => (
@@ -24,11 +24,13 @@ const NavBar: FC = () => {
 					))					
 				}
 			</div>
-			<form className="flex">
-				<input type="text" placeholder="Search" />
-				<input type="submit" />
-			</form>
-      <NavBarLoginButton />
+      <div className="flex">
+        <form className="flex">
+          <input type="text" placeholder="Search" />
+          <input type="submit" />
+        </form>
+        <NavBarLoginButton />
+      </div>
 		</div>
 	)
 }
