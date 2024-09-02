@@ -5,7 +5,7 @@ import PostGallery from "./components/PostGallery"
 
 const Home: FC = ({ metadata }) => {
   return (
-    <main className="flex w-full min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex w-full min-h-screen flex-col items-center justify-between">
       <LandingHero />
       <PostGallery />
     </main>

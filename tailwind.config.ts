@@ -12,6 +12,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "search-icon": "url('/icons/search_icon.svg')",
+        "landing-hero": "url('/images/landing_hero_image.jpg')",
+        "image-cover-film": "linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))"
       },
     },
   },

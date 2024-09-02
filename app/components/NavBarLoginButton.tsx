@@ -10,7 +10,7 @@ const NavBarLoginButton: FC = () => {
   const router = useRouter()
 
   return (
-      <button onClick={() => {
+      <button className="p-2 text-white bg-sky-400 rounded-md" onClick={() => {
         router.push(toLogin)
 			}}>Login</button>
   )

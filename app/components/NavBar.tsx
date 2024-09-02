@@ -14,20 +14,18 @@ const links: Links = {
 }
 
 const NavBar: FC = () => {
-
 	return (
-		<div className="flex justify-between w-full h-fit px-8 pt-4">
-			<div className="flex w-1/2 h-fit">
-				{
-					Object.keys(links).map((key) => (
-						<a key={ key } href={ links[key] }>{ key }</a>
+		<div className="absolute flex justify-between items-center w-full h-fit px-8 pt-4 text-xl text-white">
+      <h1>Blog Title</h1>
+      <div className="flex h-fit items-center">
+        {	
+          Object.keys(links).map((key) => (
+						<a className="mr-6" key={ key } href={ links[key] }>{ key }</a>
 					))					
 				}
-			</div>
-      <div className="flex">
-        <form className="flex">
-          <input type="text" placeholder="Search" />
-          <input type="submit" />
+        <form className="flex pr-4">
+          <input className="p-1 mr-2 border-solid border-2 border-gray-100 rounded-md bg-transparent" type="text" placeholder="Search" />
+          <input className='scale-75 bg-search-icon bg-no-repeat text-transparent' type="submit" />
         </form>
         <NavBarLoginButton />
       </div>
