@@ -9,6 +9,8 @@ export interface Metadata {
   author: string
   tag: string
   featured: boolean
+  slug: string
+  hero: string
 }
 
 export async function getRawBlogContents(slug: string): Promise<string> {
@@ -79,4 +81,8 @@ export async function getAllSlugs(): Promise<string[]> {
     console.error("Error while retrieving slugs: ", error)
     return null
   } 
+}
+
+export function buildThumbnailClasses(metadata: Metadata[]) {
+  return Objects.entries(metadata).reduce((acc, [name, path]))
 }

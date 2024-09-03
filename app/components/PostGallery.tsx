@@ -13,7 +13,7 @@ const PostGallery: FC = async () => {
   )
 
   return (
-    <div>
+    <div className="w-full max-h-screen flex p-32">
       {
         metadata.map((datum) => (
           <PostCard metadata={ datum } />
