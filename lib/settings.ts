@@ -23,7 +23,8 @@ export const settings: Settings = {
   },
   options: {
     tags: {
-      test: "bg-red-500"
+      Test: "bg-red-500",
+      Dev: "bg-blue-400"
     }
   }
 }

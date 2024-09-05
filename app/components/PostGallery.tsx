@@ -13,10 +13,10 @@ const PostGallery: FC = async () => {
   )
 
   return (
-    <div className="w-full max-h-screen flex p-32">
+    <div className="flex flex-wrap justify-center w-full max-h-screen flex p-32">
       {
-        metadata.map((datum) => (
-          <PostCard metadata={ datum } />
+        metadata.map((datum, index) => (
+          <PostCard key={ index } metadata={ datum } custom={ "mr-24" } />
         ))
       } 
     </div>
