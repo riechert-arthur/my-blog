@@ -3,24 +3,14 @@ import React, { FC } from 'react'
 import NavBarLoginButton from "./NavBarLoginButton"
 import { settings } from "../../lib/settings"
 
-interface Links {
-	[destination: string]: string
-}
-
-const links: Links = {
-	"About": "/about",
-	"Contact": "/contact",
-	"Blog": "/blog",
-}
-
 const NavBar: FC = () => {
 	return (
 		<div className="absolute flex justify-between items-center w-full h-fit px-8 pt-4 text-xl text-white">
       <h1>{ settings.metadata.title }</h1>
       <div className="flex h-fit items-center">
         {	
-          Object.keys(links).map((key) => (
-						<a className="mr-6" key={ key } href={ links[key] }>{ key }</a>
+          Object.keys(settings.primaryRoutes).map((key) => (
+						<a className="mr-6" key={ key } href={ settings.primaryRoutes[key] }>{ key }</a>
 					))					
 				}
         <form className="flex pr-4">

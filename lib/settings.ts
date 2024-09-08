@@ -11,6 +11,9 @@ interface Settings {
       [key: string]: string
     }
   }
+  primaryRoutes: {
+    [destination: string]: string
+  }
 }
 
 export const settings: Settings = {
@@ -26,5 +29,10 @@ export const settings: Settings = {
       Test: "bg-red-500",
       Dev: "bg-blue-400"
     }
+  },
+  primaryRoutes: {
+    "About": "/about",
+    "Contact": "/contact",
+    "Blog": "/blog",
   }
 }
